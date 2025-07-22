@@ -1,0 +1,45 @@
+.breadcrumbs {
+  padding-top: 13px;
+
+  @media(max-width: 1023.98px)  {
+    padding-top: 12px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__item {
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 500;
+    
+    &:not(:last-child) {
+      padding-right: 18px;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        right: 0;
+        content: '/';
+      }
+
+      a {
+        color: var(--color-black);
+        border-bottom: 1px solid transparent;
+
+        @media(any-hover: hover) {
+          &:hover {
+            border-color: currentColor;
+          }
+        }
+      }
+    }
+
+    a {
+      color: var(--color-black-70);
+    }
+  }
+}
